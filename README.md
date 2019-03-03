@@ -1,0 +1,2 @@
+# Opengl_Watermark
+android平台使用opengl对视频文件加水印并保存到新的文件
