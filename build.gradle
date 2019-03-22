@@ -1,27 +1,60 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//
+//buildscript {
+//
+//    repositories {
+//        google()
+//        jcenter()
+//    }
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:3.2.0'
+//
+//
+//        // NOTE: Do not place your application dependencies here; they belong
+//        // in the individual module build.gradle files
+//    }
+//}
+//
+//allprojects {
+//    repositories {
+//        google()
+//        jcenter()
+//    }
+//}
+//
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
 
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    
     repositories {
-        google()
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
-        
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.0.1'
     }
 }
 
 allprojects {
     repositories {
-        google()
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }//°¢ÀïÔÆµÄmaven¿â
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
         jcenter()
+        google()
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}

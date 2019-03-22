@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import com.watermark_libbrary.watermark.constant.Constants;
+
 /**
  * Created by cj on 2017/8/6.
  */
